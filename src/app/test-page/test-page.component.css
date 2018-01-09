@@ -1,0 +1,25 @@
+.head {
+    width: 100%;
+    height: 30px;
+    background-color: grey;
+    position: relative;
+}
+.head > .notification {
+    background: url("../icons/notification.png");
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+}
+.head > .count {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: red;
+    right: 10px;
+    top: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    color: aqua;
+}

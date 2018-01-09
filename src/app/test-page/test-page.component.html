@@ -1,0 +1,12 @@
+
+<div class="head">
+  <div
+          (click)="sendMsg()"
+          class="notification"></div>
+  <div class="count">{{count}}</div>
+</div>
+<div class="box">
+  <div class="massage" *ngFor="let masg of massages">
+    <div class="item">{{masg}}</div>
+  </div>
+</div>
