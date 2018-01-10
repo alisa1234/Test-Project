@@ -12,6 +12,8 @@ export class TestPageComponent implements OnInit {
   count: number = 0;
   massage_text: string;
   massages = <any>[];
+  show_notification: boolean = false;
+  show_count: boolean = false;
 
   constructor(public socketService: SocketService) {
     debugger;
@@ -31,10 +33,15 @@ export class TestPageComponent implements OnInit {
   }
 
   sendMsg() {
+    this.show_count = true;
     this.count ++;
     this.msg = 'Notification'+this.count;
     this.massages.push('Notification'+this.count);
     this.socketService.sendMessage(this.msg);
 
+  }
+  showNotification () {
+    this.show_notification = true;
+    this.show_count = false;
   }
 }

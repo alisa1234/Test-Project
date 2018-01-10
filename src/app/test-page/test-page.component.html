@@ -1,12 +1,13 @@
 
 <div class="head">
-  <div
-          (click)="sendMsg()"
+  <div (click)="showNotification()"
           class="notification"></div>
-  <div class="count">{{count}}</div>
+  <div *ngIf="show_count" class="count">{{count}}</div>
 </div>
-<div class="box">
+<div class="box" *ngIf="show_notification">
   <div class="massage" *ngFor="let masg of massages">
     <div class="item">{{masg}}</div>
   </div>
 </div>
+
+<button (click)="sendMsg()">Add notification</button>
